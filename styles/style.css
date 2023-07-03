@@ -7,53 +7,35 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  width: 1200px;
+  width: 40vw;
   margin: 0 auto;
 }
 
-.photo {
-  transition: transform 0.3s;
-  height: 300px;
+img {
+  transition: transform 0.3s 0s;
+  width: 100%;
 }
 
-.photo:hover {
-  transform: scale(1.05);
+img:hover {
+  transform: scale(1.1);
 }
 
-/* Top row */
-.photo:nth-child(1),
-.photo:nth-child(2) {
+.wide {
   grid-column: span 2;
-  grid-row: 1;
 }
 
-/* Second row */
-.photo:nth-child(3) {
+.square {
   grid-column: span 1;
-  grid-row: 2;
 }
 
-.photo:nth-child(4),
-.photo:nth-child(5) {
-  grid-column: span 2;
-  grid-row: 2;
+@media only screen and (max-width: 1200px) {
+  .photo-gallery {
+    width: 50vw;
+  }
 }
 
-/* Third row */
-.photo:nth-child(6),
-.photo:nth-child(7) {
-  grid-column: span 2;
-  grid-row: 3;
-}
-
-/* Fourth row */
-.photo:nth-child(8) {
-  grid-column: span 1;
-  grid-row: 4;
-}
-
-.photo:nth-child(9),
-.photo:nth-child(10) {
-  grid-column: span 2;
-  grid-row: 4;
+@media only screen and (max-width: 725px) {
+  .photo-gallery {
+    width: 90vw;
+  }
 }
